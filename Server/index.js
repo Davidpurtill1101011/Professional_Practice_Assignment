@@ -1,9 +1,11 @@
 // imports
 let express = require('express');
 let cors = require('cors')
+//import {Users} from './users';
 const mongoose = require('mongoose');
 var bodyParser = require('body-parser')
 let app = express();
+const path = require('path');
 
 // using the body parser
 app.use(bodyParser.json());
@@ -32,10 +34,14 @@ connection.once('open', () => {
     console.log("Mongo Db has been connected");
 });
 
-// just a basic hello world get req
 app.get('/', (req, res) => {
-    res.send("Hello");
+    res.sendFile(path.join(__dirname, '../src/app/home/home.page.html'));
 });
+
+app.get('/users', (req, res) => {
+   res.sendFile(path.join(__dirname, '../src/Components/users/users.component.html'));
+});
+
 //getting the users back from the db
 app.get('/adduser', (req,res)=>{
     User.find({}, (err,users)=>{
