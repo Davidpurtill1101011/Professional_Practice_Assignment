@@ -34,10 +34,12 @@ connection.once('open', () => {
     console.log("Mongo Db has been connected");
 });
 
+// Ionic
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../src/app/home/home.page.html'));
 });
 
+// Users Component
 app.get('/users', (req, res) => {
    res.sendFile(path.join(__dirname, '../src/Components/users/users.component.html'));
 });
