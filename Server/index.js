@@ -18,10 +18,9 @@ let Schema = mongoose.Schema;
 
 // creating the basic schema, will update 
 let UserSchema = new Schema({
-    users: {
+    
         fName: String,
-        age: Number
-    } 
+    
 });
 // var for schema to be used
 var User = mongoose.model('user', UserSchema);
@@ -47,15 +46,17 @@ app.get('/users', (req, res) => {
 //getting the users back from the db
 app.get('/adduser', (req,res)=>{
     User.find({}, (err,users)=>{
-        res.json(users);
+        res.send(users);
     })
 });
 //posting users to the database
 app.post('/adduser', (req,res)=>{
-   let users = new User(req.body);
-   users.save()
+   let user = new User();
+   user.fName = req.body.fName;
+   user.save()
    .then(item =>{
-    res.send("item saved to database");
+    res.send("Saved to database" );
+
    }).catch(err=>{
     res.status(400).send("unable to save to database");
    });
@@ -65,5 +66,3 @@ app.post('/adduser', (req,res)=>{
 app.listen(port, () => {
     console.log("Listening on port 3000...");
 });
-
-//module.exports = {User};
