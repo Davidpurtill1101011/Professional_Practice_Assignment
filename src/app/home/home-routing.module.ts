@@ -8,16 +8,17 @@ const routes: Routes = [
     path: 'home',
     component: HomePage,
     children: [
-      {
-        path: '', 
-        loadChildren: () => 
-        import('../pages/record/record.module').then(m => m.RecordPageModule)
-      },
+
       {
         path: 'feed',
         loadChildren: () =>
         import('../pages/feed/feed.module').then(m => m.FeedPageModule)
       },
+      {
+        path: 'record',
+        loadChildren: ()=>
+        import('../pages/record/record.module').then(m => m.RecordPageModule)
+      }
       
     ]
   }

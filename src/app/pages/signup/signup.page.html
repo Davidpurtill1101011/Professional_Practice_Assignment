@@ -9,18 +9,41 @@
   <form>
     <ion-list>
       <ion-item>
-        <ion-label position="stacked">Email</ion-label>
-        <ion-input autocomplete="off" type="email"></ion-input>
+        <ion-input autocomplete="off" type="email" placeholder="Enter Username" id="username"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="stacked">Username</ion-label>
-        <ion-input autocomplete="off" type="text"></ion-input>
+        <ion-input autocomplete="off" type="text" placeholder="Enter Email" id="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input autocomplete="off" type="text" placeholder="D.O.B(mm/yy)" id="dob"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input autocomplete="off" type="password" placeholder="Password" id="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input autocomplete="off" type="password" placeholder="Confirm Password" id="cpassword"></ion-input>
       </ion-item>
 
-      <ion-item>
-        <ion-label position="stacked">Password</ion-label>
-        <ion-input autocomplete="off" type="password"></ion-input>
-      </ion-item>
+
+      <h6>Pick you prefered exercise</h6>
+      <ion-radio-group value="biff">
+        <ion-item>
+          <ion-label>Running</ion-label>
+          <ion-radio ></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Walking</ion-label>
+          <ion-radio ></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Cycling</ion-label>
+          <ion-radio ></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Hiking</ion-label>
+          <ion-radio></ion-radio>
+        </ion-item>
+      </ion-radio-group>
 
       <ion-item lines='none'>
         Already have an account? <a routerLink='/login'>Sign in.</a>
