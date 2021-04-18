@@ -44,22 +44,6 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../src/app/home/home.page.html'));
     //res.render('../src/app/home/home.page.html')
 });
-
-// login Component
-/*app.post('/login', (req, res, next) => {
-    // let data = JSON.parse(JSON.stringify());
-    let username = 'fredboi1';
-    let password = 'password';
-
-    if (username === 'fredboi1' && password === 'password') {
-        console.log("Worked");
-        res.send('It has worked');
-    } else {
-        return res.send("Didnt work");
-    }
-
-});*/
-
 //getting the users back from the db
 app.get('/user', (req, res) => {
     User.find({}, (err, users) => {
@@ -78,7 +62,7 @@ app.post('/user', (req, res) => {
     user.age = req.body.age;
     //make the radio pass the string of what is clicked.
     user.preferedExercise = req.body.preferExe;
-    //savinf to the DB
+    //saving to the DB, with the .save() method from mongoose import
     user.save()
         .then(item => {
             res.send("Saved to database");
