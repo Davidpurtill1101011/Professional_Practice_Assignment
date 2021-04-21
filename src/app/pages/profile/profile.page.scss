@@ -1,0 +1,35 @@
+ion-content {
+    --ion-background-color: lightgray;
+}
+
+ion-card {
+    --ion-background-color: white;
+}
+
+ion-avatar {
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+ion-button {
+    margin: 5px;
+    float: left;
+}
+
+h1 {   
+   margin: 15px;
+}
+
+h2 {
+    margin: 15px;
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+h4 {
+    margin: 15px;
+    float: left;
+    padding-left: 15px;
+}

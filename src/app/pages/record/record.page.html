@@ -1,20 +1,20 @@
 <ion-content>
   <div #map class="map">
   </div>
-  <div class="card highlight-card card-small" background="black" class="bkrnd">
-    <center>
-    <ion-button (click)="startTimer()">
-      <ion-icon name="play"></ion-icon>
-    </ion-button>
-  
-    <ion-button (click)="pauseTimer()">
-      <ion-icon name="pause" ></ion-icon>
-    </ion-button>
-  
-    <ion-button (click)="resetTimer()">
-      <ion-icon name="refresh" ></ion-icon>
-    </ion-button>
-    <p>{{time.toISOString().substr(11, 9)}}</p>
-  </center>
-  </div>
+    <div class="card highlight-card card-small" background="black" class="bkrnd">
+      <center>
+        <ion-button (click)="startTimer()">
+          <ion-icon name="play"></ion-icon>
+        </ion-button>
+
+        <ion-button (click)="pauseTimer()">
+          <ion-icon name="pause"></ion-icon>
+        </ion-button>
+
+        <ion-button (click)="resetTimer()">
+          <ion-icon name="refresh"></ion-icon>
+        </ion-button>
+        <p>{{time.toISOString().substr(11, 9)}}</p>
+      </center>
+    </div>
 </ion-content>
