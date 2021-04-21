@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilePage implements OnInit {
 
-  constructor() { }
+  user: any;
+  
+  constructor(private afAuth: AngularFireAuth) { 
+    this.logInUser();
+  }
 
   ngOnInit() {
+  }
+
+
+  logInUser() {
+    this.afAuth.signInAnonymously().then(res =>{
+      this.user = res.user;
+      console.log(res.user);
+    })
   }
 
 }
