@@ -18,6 +18,11 @@ const routes: Routes = [
         path: 'record',
         loadChildren: ()=>
         import('../pages/record/record.module').then(m => m.RecordPageModule)
+      },
+      {
+        path: 'profile',
+        loadChildren: () =>
+        import('../pages/profile/profile.module').then(m => m.ProfilePageModule)
       }
       
     ]

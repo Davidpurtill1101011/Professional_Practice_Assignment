@@ -17,7 +17,8 @@ export class SignupPage implements OnInit {
     event.preventDefault();
     const errors = [];
     const target = event.target;
-    const username = target.querySelector('#username').value;
+    const firstname = target.querySelector('#firstname').value;
+    const surname = target.querySelector('#surname').value;
     const email = target.querySelector('#email').value;
     const dob = target.querySelector('#dob').value;
     const password = target.querySelector('#password');

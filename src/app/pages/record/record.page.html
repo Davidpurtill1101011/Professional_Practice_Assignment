@@ -2,6 +2,7 @@
   <ion-title>Tracking</ion-title>
   <div #map class="map">
   </div>
+<<<<<<< HEAD
   <ion-button (click)="startTracking()" *ngIf="!isTracking">
     <ion-icon name="locate"></ion-icon>
     Start Tracking
@@ -11,4 +12,22 @@
     <ion-icon name="locate"></ion-icon>
     Stop Tracking
   </ion-button>
+=======
+    <div class="card highlight-card card-small" background="black" class="bkrnd">
+      <center>
+        <ion-button (click)="startTimer()">
+          <ion-icon name="play"></ion-icon>
+        </ion-button>
+
+        <ion-button (click)="pauseTimer()">
+          <ion-icon name="pause"></ion-icon>
+        </ion-button>
+
+        <ion-button (click)="resetTimer()">
+          <ion-icon name="refresh"></ion-icon>
+        </ion-button>
+        <p>{{time.toISOString().substr(11, 9)}}</p>
+      </center>
+    </div>
+>>>>>>> 556561066354ef8589578eede6217c0e0460a775
 </ion-content>

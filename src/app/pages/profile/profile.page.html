@@ -1,0 +1,48 @@
+<!-- Header -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title align=center> Profile </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Content -->
+<ion-content>
+  <ion-card>
+    <ion-avatar>
+      <img src="https://i.stack.imgur.com/l60Hf.png">
+    </ion-avatar>
+
+    <ion-label>
+      <!--<p>{{user.fName}} {{user.sName}} </p>-->
+      <h1>Name: {{user.uid}}</h1>
+      <h1>Age: </h1>
+    </ion-label>
+
+    <ion-button color="success">Edit Profile</ion-button>
+  </ion-card>
+
+  <ion-card>    
+      <ion-tab-bar>
+        <ion-tab-button tab="running">
+          <ion-icon name="accessibility-outline"></ion-icon>
+          <ion-label></ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="walking">
+          <ion-icon name="footsteps-outline"></ion-icon>
+          <ion-label></ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="cycling">
+          <ion-icon name="bicycle-outline"></ion-icon>
+          <ion-label></ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+      <h2>Previous Records</h2>
+      <div>
+        <h4>Distance</h4>
+        <h4>Time</h4>
+        <h4>Date</h4>
+      </div>
+      
+  </ion-card>
+
+</ion-content>
