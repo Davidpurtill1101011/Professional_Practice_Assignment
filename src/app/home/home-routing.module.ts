@@ -10,7 +10,7 @@ const routes: Routes = [
     children: [
 
       {
-        path: 'feed',
+        path: '',
         loadChildren: () =>
         import('../pages/feed/feed.module').then(m => m.FeedPageModule)
       },

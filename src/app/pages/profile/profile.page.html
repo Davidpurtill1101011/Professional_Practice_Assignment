@@ -12,7 +12,7 @@
       <img src="https://i.stack.imgur.com/l60Hf.png">
     </ion-avatar>
 
-    <ion-label>
+    <ion-label *ngIf="user">
       <!--<p>{{user.fName}} {{user.sName}} </p>-->
       <h1>Name: {{user.uid}}</h1>
       <h1>Age: </h1>
