@@ -98,6 +98,8 @@
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^4.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
-    <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
-    <string>This app wants to track you location.</string>
+    <plugin name="cordova-plugin-geolocation" spec="^5.28.0" />
+    <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription"/>
+    
+    <!-- <string>This app wants to track you location.</string> -->
 </widget>
